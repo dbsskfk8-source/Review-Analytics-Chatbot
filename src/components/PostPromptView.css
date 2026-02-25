@@ -1,0 +1,355 @@
+.post-prompt-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+.post-header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.post-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewbot-icon-wrapper {
+    background-color: var(--primary);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewbot-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.post-header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.new-chat-btn-header {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.new-chat-btn-header:hover {
+    background-color: var(--primary-hover);
+}
+
+.header-avatar {
+    background-color: #fca5a5;
+    /* Or a random color to match mockup */
+    color: white;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 24px 120px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-pill {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.message-row {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-row {
+    align-items: flex-end;
+}
+
+.ai-row {
+    align-items: flex-start;
+}
+
+.message-meta-right {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    margin-right: 48px;
+}
+
+.message-meta-right strong {
+    color: var(--text-main);
+}
+
+.message-meta-left {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    margin-left: 48px;
+}
+
+.message-meta-left strong {
+    color: var(--text-main);
+}
+
+.message-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 85%;
+}
+
+.user-wrapper {
+    flex-direction: row;
+}
+
+.ai-wrapper {
+    flex-direction: row;
+}
+
+.message-bubble {
+    padding: 16px;
+    border-radius: 16px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.user-bubble {
+    background-color: var(--primary);
+    color: white;
+    border-top-right-radius: 4px;
+}
+
+.ai-bubble {
+    background-color: var(--white);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-top-left-radius: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.sm-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    flex-shrink: 0;
+    background-color: #fbcfe8;
+    /* pink-ish */
+    color: #831843;
+}
+
+.ai-avatar-icon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ai-text {
+    margin-bottom: 12px;
+}
+
+.ai-text:last-child {
+    margin-bottom: 0;
+}
+
+.ai-list {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.ai-list li {
+    margin-bottom: 8px;
+}
+
+.ai-list li:last-child {
+    margin-bottom: 0px;
+}
+
+/* Referenced Reviews */
+.referenced-reviews-section {
+    margin-left: 44px;
+    /* Align with AI bubble */
+    margin-top: 24px;
+    max-width: 760px;
+    width: 100%;
+}
+
+.referenced-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.quote-icon {
+    margin-right: 4px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.review-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reviewer-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.s-bg {
+    background-color: #0f172a;
+}
+
+.m-bg {
+    background-color: #1e293b;
+}
+
+.reviewer-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.review-source {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.review-content {
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.review-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: var(--text-main);
+}
+
+.view-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.view-more-btn:hover {
+    text-decoration: underline;
+}
+
+.floating {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--bg-color) 80%, transparent);
+    padding-top: 40px;
+}
